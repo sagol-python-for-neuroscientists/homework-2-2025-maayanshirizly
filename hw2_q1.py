@@ -22,6 +22,21 @@ def english_to_morse(
     input_file: str = "lorem.txt",
     output_file: str = "lorem_morse.txt"
 ):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        text = f.read()
+        words = text.split()
+        morse_words = [
+        ' '.join(MORSE_CODE.get(char.upper(), '') for char in word)
+        for word in words
+    ]
+    morse_text = '\n'.join(morse_words)
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(morse_text)
+
+if __name__ == "__main__":
+    english_to_morse()
+
+            
     """Convert an input text file to an output Morse code file.
 
     Notes

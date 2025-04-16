@@ -1,4 +1,8 @@
 """ Tests for question 2 - Spreading Virus """
+"""
+    The code defines test cases for the "Spreading Virus" scenario where agents with different
+    conditions interact, and it checks the expected outcomes against the actual results.
+    """
 from hw2_q2 import Agent, Condition, meetup
 
 data0 = (
